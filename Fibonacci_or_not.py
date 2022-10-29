@@ -1,14 +1,13 @@
 n=int(input())
 a=0
 b=1
-fl=False
+fg=True
 while a<=n and b<=n:
     a=b+a
     b=b+a
-    if n==a or n==b:
-       fl=True
-       break
-if fl or n==0 or n==1:
-    print(True)
-else:
+    if a==n or b==n:
+        print(True)
+        fg=False
+        break
+if fg:
     print(False)
